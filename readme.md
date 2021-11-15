@@ -7,7 +7,7 @@ This is a Simple ToDo list project where you can add tasks to either a normal ta
 * ejs 
 
 #### Setup
-* To run this project, you need to install
+###### To run this project, you need to install
 * express
 * ejs
 * body-parser
