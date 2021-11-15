@@ -4,8 +4,7 @@ This is a Simple ToDo list project where you can add tasks to either a normal ta
 ### Technologies used
 * NodeJS
 * Express
-* HTML
-* CSS
+* ejs 
 
 #### Setup
 * To run this project, you need to install
