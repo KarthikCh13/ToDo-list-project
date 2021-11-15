@@ -15,7 +15,7 @@ This is a Simple ToDo list project where you can add tasks to either a normal ta
 
 ###### You can copy the following commands to install the packages
 ```
-npm install --save express ejs body-parser
+npm install --save express ejs body-parser nodemon
 ```
 ###### And run the app by running the following command
 ```
