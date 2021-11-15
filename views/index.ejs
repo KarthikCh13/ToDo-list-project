@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>ToDo App</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100"
+      rel="stylesheet"
+    />
+    <!-- <link href='/styles.css' rel=”stylesheet”> -->
+
+    <style>
+      * {
+        font-family: “Product Sans”;
+      }
+
+      html {
+        font-family: "Ubuntu", sans-serif;
+
+        background: #e7bb68;
+        color: #333333;
+        margin-top: 20px;
+      }
+
+      .container {
+        display: block;
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      .new-task, .new-Grocery {
+        border-radius: 4px;
+        border: 1px solid #8c82fc;
+      }
+
+      #b1,
+      #b2 {
+        font-family: "Ubuntu", sans-serif;
+
+        line-height: 1;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 1px solid #8c82fc;
+        background: #fff;
+        color: #8c82fc;
+        border-radius: 40px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.35s;
+      }
+
+      /* #b2 {
+
+} */
+
+      button:hover {
+        background: #8c82fc;
+        color: #fff;
+      }
+
+      button span {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.35s;
+      }
+      /* button {
+  background-color: #00aeff;
+  color: white;
+  border-radius: %;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+} */
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>ToDo List App</h2>
+      <form action="/addtask" method="POST">
+        <input
+          class="new-task"
+          type="text"
+          name="newtask"
+          placeholder="add new task"
+        />
+        <button id="b1">Add Task</button>
+        <h2>Added Task</h2>
+        <% for( var i = 0; i < task.length; i++){ %>
+        <li>
+          <input type="checkbox" name="check" value="<%= task[i] %>" /> <%=
+          task[i] %>
+        </li>
+        <% } %>
+        <button id="b2" formaction="/removetask" type="submit" id="top">
+          Remove
+        </button>
+
+        
+      
+      </form>
+
+      <form action="/addGroceryItem" method="POST">
+        <input
+          class="new-Grocery"
+          type="text"
+          name="newGrocery"
+          placeholder="add new grocery item"
+        />
+        <button id="b2">Add Grocery item</button>
+
+        <h2>Grocery list</h2>
+        <% for( var i = 0; i < groceryList.length; i++){ %>
+        <li>
+          <input type="checkbox" name="check" value="<%= groceryList[i] %>" /> <%=
+          groceryList[i] %>
+        </li>
+        <% } %>
+        <button id="b2" formaction="/removeGrocery" type="submit" id="top">
+          Remove
+        </button>
+
+      </form>
+
+      <h2>Completed task</h2>
+      <% for(var i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked /><%= complete[i] %></li>
+      <% } %>
+      
+    </div>
+  </body>
+</html>
